@@ -1,3 +1,6 @@
-import { remultApi } from "remult/remult-express";
-  
-export const api = remultApi({});
+import { remultApi } from 'remult/remult-express';
+import { List } from '../shared/list.ts';
+
+export const api = remultApi({
+    entities: [List],
+});
