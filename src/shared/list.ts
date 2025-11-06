@@ -11,6 +11,8 @@ export class List {
     @Fields.string()
     name = '';
     @Fields.string()
+    description = '';
+    @Fields.string()
     password = '';
     @Fields.json()
     items: Item[] = [];
