@@ -82,6 +82,7 @@ const Admin: React.FC = () => {
                     <div className="list-info">
                         <div>Name: {list.name}</div>
                         <div>Description: {list.description}</div>
+                        <div>Link to Share: {import.meta.env.VITE_APP_URL + '/user/' + list.id}</div>
                     </div>
                     <ul className="items-list">
                         {list.items?.map((item, idx) => (

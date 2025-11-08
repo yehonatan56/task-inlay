@@ -32,13 +32,14 @@ export class AuthController {
 
     @BackendMethod({ allowed: true })
     static async loginToList(
-        listName: string,
+        listName: string | undefined,
         password?: string,
         isAdmin: boolean = false
     ): Promise<{ success: boolean; list?: List; error?: string }> {
         try {
+            console.log('trying to find list', listName);
             const foundList = await repo(List).findOne({
-                where: { name: listName },
+                where: { [Number(listName) ? 'id' : 'name']: listName },
             });
 
             if (!foundList) {
