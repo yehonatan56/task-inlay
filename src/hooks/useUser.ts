@@ -13,9 +13,9 @@ export default function useUser() {
 
     useEffect(() => {
         console.log('asking for name');
-        if (!name) setName(prompt('Enter your name') || '');
         if (id) {
             console.log('Trying to connect to list', id);
+            setName(prompt('Enter your name') || '');
             setListName(id);
             handleConnect(new Event('submit') as unknown as React.FormEvent, id);
         }

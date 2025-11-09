@@ -22,7 +22,7 @@ export default function User() {
 
                         <input
                             type="text"
-                            placeholder="Enter list name"
+                            placeholder="Enter list name or id"
                             value={listName}
                             onChange={(e) => setListName(e.target.value)}
                             className="name-input"
