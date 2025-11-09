@@ -16,4 +16,4 @@ app.get('/*splat', (_, res) => {
 });
 // end of frontend serving code
 
-app.listen(process.env['PORT'] || 3002, () => console.log('Server started'));
+app.listen(process.env['PORT'] || 3002, () => console.log(`Server started on port ${process.env['PORT'] || 3002}`));
