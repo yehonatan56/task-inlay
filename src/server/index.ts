@@ -1,16 +1,19 @@
-import express from "express";
-import { api } from "./api.js";
+import express from 'express';
+import dotenv from 'dotenv';
+import { api } from './api.js';
+
+dotenv.config();
 
 const app = express();
 
 app.use(api);
 
 // This code is responsible for serving the frontend files.
-const frontendFiles = process.cwd() + "/dist";
+const frontendFiles = process.cwd() + '/dist';
 app.use(express.static(frontendFiles));
-app.get("/*splat", (_, res) => {
-  res.sendFile(frontendFiles + "/index.html");
+app.get('/*splat', (_, res) => {
+    res.sendFile(frontendFiles + '/index.html');
 });
 // end of frontend serving code
 
-app.listen(process.env["PORT"] || 3002, () => console.log("Server started"));
+app.listen(process.env['PORT'] || 3002, () => console.log('Server started'));
