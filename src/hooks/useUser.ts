@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { List } from '../shared/list.ts';
-import { AuthController } from '../shared/AuthController.ts';
+import { List } from '../shared/list.js';
+import { AuthController } from '../shared/AuthController.js';
 import { repo } from 'remult';
 import { useParams } from 'react-router-dom';
 

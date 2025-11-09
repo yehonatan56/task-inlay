@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { AuthController } from '../shared/AuthController.ts';
-import { List } from '../shared/list.ts';
+import { AuthController } from '../shared/AuthController.js';
+import { List } from '../shared/list.js';
 import { repo } from 'remult';
 
 export function useAdmin() {

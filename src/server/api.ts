@@ -1,6 +1,6 @@
 import { remultApi } from 'remult/remult-express';
-import { List } from '../shared/list.ts';
-import { AuthController } from '../shared/AuthController.ts';
+import { List } from '../shared/list.js';
+import { AuthController } from '../shared/AuthController.js';
 import { createPostgresDataProvider } from 'remult/postgres';
 
 export const api = remultApi({
