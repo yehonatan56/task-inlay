@@ -3,7 +3,7 @@ import './user.css';
 
 export default function User() {
     const { name, setName, list, listName, setListName, handleConnect, handleClickItem } = useUser();
-    console.log('user render');
+    console.log('user render',list);
 
     return (
         <div className="user-container">
