@@ -29,7 +29,7 @@ export default function useUser() {
                         id: loggedInList.list.id,
                         name: loggedInList.list.name,
                         description: loggedInList.list.description,
-                        items: loggedInList.list.items.filter((item) => item.responsible === undefined && item),
+                        items: loggedInList.list.items.filter((item) => !item.responsible),
                     });
                 } else {
                     alert('Connect failed: ' + loggedInList?.error);
