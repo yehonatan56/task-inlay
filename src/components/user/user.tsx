@@ -40,7 +40,6 @@ export default function User() {
                     <p>{list.description}</p>
                     <div className="items-container">
                         {list.items
-                            ?.filter((item) => item.responsible === undefined )
                             .map((item, idx) => (
                                 <div key={idx} className="item" onClick={() => handleClickItem(item.text)}>
                                     <span className="item-text">{item.text}</span>
